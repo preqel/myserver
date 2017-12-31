@@ -8,21 +8,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-
 public class FServlet extends HttpServlet {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+	
+ 	private static final long serialVersionUID = 1L;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		System.out.println("dd");
-		
-
 		String jsonStr = "{\"name\":\"fly\",\"type\":\"虫子\"}";
 //		PrintWriter out = null;
 //		try {
@@ -39,7 +32,6 @@ public class FServlet extends HttpServlet {
 	 	String str = "result";
 		byte[] bytes = jsonStr.getBytes("UTF-8");
 		resp.getOutputStream().write(bytes);
-	//	super.doGet(req, resp);
 	}
 
 	@Override
@@ -47,8 +39,6 @@ public class FServlet extends HttpServlet {
 			throws ServletException, IOException {
 		super.doPost(req, resp);
 	}
-
-	
 	
 	
 }
